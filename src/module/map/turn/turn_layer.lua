@@ -142,7 +142,7 @@ TurnLayer.enemyTurnBegin = function(self, rounds, turn)
             general:turnBegin(nextCallback)
         end, function()
             AiMgr.run(generals, "enemy", function()
-                TurnLayer.new(rounds + 1, turn + 1)
+                TurnLayer.new(rounds, turn + 1)
             end)
         end)
     end

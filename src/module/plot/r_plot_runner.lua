@@ -254,7 +254,7 @@ RPlotRunner.cmdLoadBackground = function(self, args, callback)
     end
 end
 
--- 武将出现 横坐标 纵坐标 朝向 武将序号 动作形态
+-- 武将出现 武将名 横坐标 纵坐标 朝向 武将序号 动作形态
 RPlotRunner.cmdRolePlay = function(self, args, callback)
     local roleName, col, row, dir, roleId, actionId = args[1], args[2], args[3], args[4], args[5], args[6]
     local pos = self.grid[col][row]

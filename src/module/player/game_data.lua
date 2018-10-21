@@ -11,9 +11,6 @@ local GameEncode   = "cashjkhdfwyeri312n1z1fd41"
 local GameSaveName = "save.ccz"
 
 local SavePath = device.writablePath .. "save.lua"
-if device.platform == "mac" then
-    SavePath = "/Users/zwsatan/Desktop/csdncode/ccz/save.lua"
-end
 
 local GameData = {}
 
