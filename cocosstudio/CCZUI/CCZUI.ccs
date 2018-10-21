@@ -1,0 +1,133 @@
+<Solution>
+  <PropertyGroup Name="CCZUI" Version="2.0.6.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="ccz">
+          <Folder Name="ui">
+            <Folder Name="res">
+              <Image Name="head.jpg" />
+              <Image Name="start_ui_bg.jpg" />
+              <Image Name="152_stand_down_0.PNG" />
+              <Image Name="bg.png" />
+              <Image Name="blue.png" />
+              <Image Name="btn_start_d.png" />
+              <Image Name="btn_start_n.png" />
+              <Image Name="button.png" />
+              <Image Name="CheckBoxNode_Disable.png" />
+              <Image Name="CheckBoxNode_Normal.png" />
+              <Image Name="CheckBox_Disable.png" />
+              <Image Name="CheckBox_Normal.png" />
+              <Image Name="CheckBox_Press.png" />
+              <Image Name="choiceImage.png" />
+              <Image Name="desc_bg.png" />
+              <Image Name="dialog_button_bg.png" />
+              <Image Name="dialog_icon.png" />
+              <Image Name="fightInterface.png" />
+              <Image Name="half_bg.png" />
+              <Image Name="image1 (2).png" />
+              <Image Name="image2 (2).png" />
+              <Image Name="image5.png" />
+              <Image Name="image6.png" />
+              <Image Name="MM02.png" />
+              <Image Name="MM10.png" />
+              <Image Name="mp_fg.png" />
+              <Image Name="red.png" />
+              <Image Name="selectImage.png" />
+              <Image Name="start_ui_button.png" />
+              <Image Name="title_bg.png" />
+              <Folder Name="bar">
+                <Image Name="bg.png" />
+              </Folder>
+              <Folder Name="exp1">
+                <Image Name="fore.png" />
+              </Folder>
+              <Image Name="load_bg.jpg" />
+              <Image Name="button_normal.png" />
+              <Image Name="button_press.png" />
+              <Image Name="button_disabled.png" />
+              <Image Name="qing_1.png" />
+              <Image Name="listview_bg.png" />
+              <Image Name="general_box.png" />
+              <Image Name="general_selected.png" />
+              <Image Name="equip_bg.png" />
+              <Image Name="wuqi.png" />
+              <Image Name="progress_green.png" />
+              <Image Name="progress_bg1.png" />
+              <Image Name="equip_item_bg2.png" />
+              <Image Name="bg1.png" />
+              <Image Name="bg2.png" />
+              <Image Name="bg3.png" />
+              <Image Name="item_bg.png" />
+              <Image Name="general_bg.png" />
+              <Image Name="general_selected2.png" />
+              <Image Name="dialog_bg2.png" />
+              <Image Name="button2.png" />
+              <Image Name="roundrect2.png" />
+              <Image Name="arrow2.png" />
+              <Image Name="roundrect.png" />
+              <Image Name="arrow.png" />
+              <Image Name="button3.png" />
+              <Image Name="dialog_bg3.png" />
+              <Image Name="dialog_bg4.png" />
+              <Image Name="bg4.png" />
+              <Image Name="bg6.png" />
+              <Image Name="bg5.png" />
+              <Image Name="bg7.png" />
+              <Image Name="bg8.png" />
+              <Image Name="button4.png" />
+              <Image Name="button1.png" />
+              <Image Name="equip_item_bg1.png" />
+              <Image Name="selectInterface.png" />
+              <Image Name="item_bg2.png" />
+              <Image Name="selected_bg1.png" />
+              <Image Name="button5.png" />
+              <Image Name="button6.png" />
+              <Image Name="shiping.png" />
+            </Folder>
+            <Folder Name="font">
+              <Fnt Name="defaultBMFont.fnt" />
+              <Image Name="num_0.png" />
+              <Fnt Name="num_0.fnt" />
+              <Fnt Name="ziku_26_0.fnt" />
+              <File Name="lishu.ttf" />
+              <Fnt Name="ziku_0.fnt" />
+            </Folder>
+          </Folder>
+        </Folder>
+        <Project Name="Dialog.csd" />
+        <Project Name="FightGeneralButton.csd" />
+        <Project Name="FightPrepareUI.csd" />
+        <Project Name="GameStartUI.csd" />
+        <Project Name="RPlotUI1.csd" />
+        <Project Name="LoadingUI.csd" />
+        <Project Name="SPlotUI.csd" />
+        <Project Name="EquipUI.csd" />
+        <Project Name="EquipNode.csd" />
+        <Project Name="ProgressNode.csd" />
+        <Project Name="GeneralNode.csd" />
+        <Project Name="PopMenu.csd" />
+        <Project Name="RPlotUI2.csd" />
+        <Project Name="ErrorUI.csd" />
+        <Project Name="ShopUI.csd" />
+        <Project Name="ShopItemNode.csd" />
+        <Project Name="BattleWinUI.csd" />
+        <Project Name="BattleRewardItemNode.csd" />
+      </RootFolder>
+      <Project Name="Dialog.csd" />
+      <Folder Name="ccz">
+        <Folder Name="ui">
+          <Folder Name="res">
+            <Image Name="dialog_bg.png" />
+            <Image Name="dialog_button_bg.png" />
+            <Image Name="dialog_icon.png" />
+            <Image Name="tipbox-bg.png" />
+            <Image Name="bg.png" />
+            <Image Name="title_bg.png" />
+            <Image Name="desc_bg.png" />
+          </Folder>
+        </Folder>
+      </Folder>
+    </Group>
+  </SolutionFolder>
+</Solution>

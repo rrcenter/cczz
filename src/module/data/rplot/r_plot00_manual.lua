@@ -1,0 +1,118 @@
+--[[
+    R剧本0
+--]]
+
+local Plot = {}
+
+Plot = {
+    {cmd = "LoadBackground", args = {"MMap-71"}},
+    {cmd = "RolePlay", args = {"骑兵", 40, 5, "down", 0}},
+    {cmd = "RoleMove", args = {{0, 40, 15}}},
+    {cmd = "RolePlay", args = {"曹操", 40, 5, "down", 1}},
+    {cmd = "RolePlay", args = {"许子将", 54, 95, "up", 3}},
+    {cmd = "RoleMove", args = {{0, 40, 25}, {1, 40, 15}, {3, 54, 85}}},
+    {cmd = "RolePlay", args = {"骑兵", 40, 5, "down", 2}},
+    {cmd = "RoleMove", args = {{0, 40, 45}, {1, 40, 35}, {2, 40, 25}, {3, 54, 65}}},
+    {cmd = "StoryAction", args = {0, "up", 0}},
+    {cmd = "StoryAction", args = {1, "down", 0}},
+    {cmd = "StoryAction", args = {2, "down", 0}},
+    {cmd = "StoryAction", args = {3, "up", 0}},
+    {cmd = "Dialog", args = {0, "官军", "队长，咱们得快点！"}},
+    {cmd = "Dialog", args = {1, "曹操", "我知道！"}},
+    {cmd = "RoleMove", args = {{0, 40, 60}, {1, 40, 50}, {2, 40, 40}, {3, 54, 50}}},
+    {cmd = "StoryAction", args = {3, "left", 0}},
+    {cmd = "Dialog", args = {3, "许子将", "请留步！"}},
+    {cmd = "StoryAction", args = {0, "down", 0}},
+    {cmd = "StoryAction", args = {1, "down", 0}},
+    {cmd = "StoryAction", args = {2, "down", 0}},
+    {cmd = "StoryAction", args = {0, "right", 0}},
+    {cmd = "Dialog", args = {0, "官军", "来者何人？你想阻止官兵吗！"}},
+    {cmd = "Dialog", args = {1, "曹操", "休得无理！"}},
+    {cmd = "StoryAction", args = {1, "right", 0}},
+    {cmd = "Dialog", args = {1, "曹操", "老丈找我有事？我是官军骑兵队长，姓曹名操，字孟德。"}},
+    {cmd = "StoryAction", args = {3, "left", 8}},
+    {cmd = "Dialog", args = {3, "许子将", "其实，小老儿见您相貌异于常人，所以不经意便喊住了您。"}},
+    {cmd = "StoryAction", args = {3, "left", 0}},
+    {cmd = "Dialog", args = {0, "官军", "喂，不得对我们队长无礼！"}},
+    {cmd = "StoryAction", args = {1, "down", 0}},
+    {cmd = "Dialog", args = {1, "曹操", "哎，多嘴！"}},
+    {cmd = "StoryAction", args = {1, "right", 0}},
+    {cmd = "Dialog", args = {1, "曹操", "老丈，你可会看相？"}},
+    {cmd = "Dialog", args = {3, "许子将", "是的。"}},
+    {cmd = "Dialog", args = {1, "曹操", "这倒有些意思！"}},
+    {cmd = "Dialog", args = {3, "许子将", "阁下乃治世之能臣，不过将来世人会称你作奸雄的。"}},
+    {cmd = "Dialog", args = {0, "官军", "你，你说什么？"}},
+    {cmd = "Dialog", args = {1, "曹操", "老丈，你是说天将大乱吗？"}},
+    {cmd = "Dialog", args = {3, "许子将", "哈哈，小老儿可没这么说。"}},
+    {cmd = "Dialog", args = {1, "曹操", "老丈不必隐瞒了，不过，奸雄这话……"}},
+    {cmd = "ChoiceDialog", args = {1, "曹操", {"1、正是吾心所愿！", 12}, {"2、似乎言之过早！", 13}}},
+    {
+        cmd = "SonThings",
+        args = {
+            checkVar = 12,
+            sonPlot = {
+                {cmd = "StoryAction", args = {1, "right", 5}},
+                {cmd = "AddCareerism", args = {10}},
+                {cmd = "Dialog", args = {1, "曹操", "既然生为男儿，乱世奸雄正是吾心所愿。"}},
+                {cmd = "StoryAction", args = {1, "right", 1}},
+                {cmd = "StoryAction", args = {3, "left", 8}},
+                {cmd = "Dialog", args = {3, "许子将", "原来如此。其实小老儿不过是胡言乱语。还请大人莫怪。"}},
+                {cmd = "Dialog", args = {3, "许子将", "那么小老儿就此告辞，祝将军旗开得胜。"}},
+                {cmd = "StoryAction", args = {3, "left", 0}},
+            },
+        },
+    },
+    {
+        cmd = "SonThings",
+        args = {
+            checkVar = 13,
+            sonPlot = {
+                {cmd = "AddCareerism", args = {-10}},
+                {cmd = "Dialog", args = {1, "曹操", "……奸雄？\n现在就下定论，未免言之过早。"}},
+                {cmd = "StoryAction", args = {3, "left", 8}},
+                {cmd = "Dialog", args = {3, "许子将", "原来如此。其实小老儿不过是胡言乱语。还请大人莫怪。"}},
+                {cmd = "Dialog", args = {3, "许子将", "那么小老儿就此告辞，祝将军旗开得胜。"}},
+                {cmd = "StoryAction", args = {3, "left", 0}},
+            },
+        },
+    },
+    {cmd = "Dialog", args = {1, "曹操", "……嗯。\n再会了，老丈。"}},
+    {cmd = "StoryAction", args = {1, "down", 0}},
+    {cmd = "Delay", args = {0.5}},
+    {cmd = "StoryAction", args = {1, "down", 5}},
+    {cmd = "Dialog", args = {1, "曹操", "出发！\n赶往激战中的颍川！"}},
+    {cmd = "StoryAction", args = {1, "down", 2}},
+    {cmd = "StoryAction", args = {0, "up", 0}},
+    {cmd = "Dialog", args = {0, "官军", "是！"}},
+    {cmd = "StoryAction", args = {0, "down", 0}},
+    {cmd = "RoleMove", args = {{0, 40, 85}, {1, 40, 75}, {2, 40, 65}, {3, 54, 20}}},
+    {cmd = "StoryAction", args = {3, "down", 0}},
+    {cmd = "StoryAction", args = {0, "down", 0}},
+    {cmd = "StoryAction", args = {1, "down", 0}},
+    {cmd = "StoryAction", args = {2, "down", 0}},
+    {
+        cmd = "SonThings",
+        args = {
+            checkVar = 12,
+            sonPlot = {
+                {cmd = "Dialog", args = {3, "许子将", "原来自己想当奸雄？\n好好，曹大人……\n您就朝着自己的理想努力吧。"}},
+                {cmd = "Dialog", args = {3, "许子将", "呵、呵、呵！！"}},
+            },
+        },
+    },
+    {
+        cmd = "SonThings",
+        args = {
+            checkVar = 13,
+            sonPlot = {
+                {cmd = "Dialog", args = {3, "许子将", "那年轻人的相貌，\n正是乱世之奸雄，治世之能臣。"}},
+                {cmd = "Dialog", args = {3, "许子将", "不知他将来会如何……？\n就让我们拭目以待吧。"}},
+                {cmd = "StoryAction", args = {3, "left", 0}},
+            },
+        },
+    },
+    {cmd = "SceneNameSet", args = {"颍川救援"}},
+    {cmd = "ShowMenu", args = {false}},
+}
+
+return Plot
