@@ -498,9 +498,9 @@ RPlotRunner.cmdAddCareerism = function(self, args, callback)
         GameData.setCareerism(args[2])
         callback()
     elseif args[1] == "+" then
-        EventMgr.triggerEvent(EventConst.PLOT_ADD_CAREERISM, -args[2], callback)
-    else
         EventMgr.triggerEvent(EventConst.PLOT_ADD_CAREERISM, args[2], callback)
+    else
+        EventMgr.triggerEvent(EventConst.PLOT_ADD_CAREERISM, -args[2], callback)
     end
 end
 

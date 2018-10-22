@@ -56,7 +56,7 @@ RPlotUI.initUI = function(self)
 
     if GameData.getCareerism() then
         printInfo("设置野心值：%d", GameData.getCareerism())
-        self.blueProgress:setPercent(GameData.getCareerism())
+        self.redProgress:setPercent(GameData.getCareerism())
     end
 end
 
@@ -107,7 +107,7 @@ RPlotUI.initFrameEvent = function(self)
     -- 仅仅为了让进度条能平滑移动一下子
     self:addNodeEventListener(cc.NODE_ENTER_FRAME_EVENT, function(dt)
         self.percentValue = self.percentValue - self.percentStep
-        self.blueProgress:setPercent(self.blueProgress:getPercent() + self.percentStep)
+        self.redProgress:setPercent(self.redProgress:getPercent() + self.percentStep)
 
         if self.percentValue == 0 then
             self:unscheduleUpdate()
@@ -164,6 +164,7 @@ RPlotUI.setFightButtonPlot = function(self, plot)
 end
 
 RPlotUI.addCareerism = function(self, value, callback)
+    printInfo("通知RPlotUI野心值变化: " .. value)
     self.percentValue = value
     self.percentStep = (value > 0) and 1 or -1
     self.percentCallback = callback

@@ -65,28 +65,18 @@
                 </Children>
                 <FileData Type="Normal" Path="ccz/ui/res/bg4.png" />
               </NodeObjectData>
-              <NodeObjectData Name="Panel_7" ActionTag="1858627869" FrameEvent="" Tag="215" ObjectIndex="7" PrePositionEnabled="True" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="10" BottomEage="10" Scale9OriginX="30" Scale9OriginY="3" Scale9Width="55" Scale9Height="7" ctype="PanelObjectData">
-                <Position X="150.0000" Y="24.7141" />
+              <NodeObjectData Name="Panel_7" ActionTag="1858627869" FrameEvent="" Tag="215" ObjectIndex="7" PrePositionEnabled="True" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="10" BottomEage="10" Scale9OriginX="30" Scale9OriginY="3" Scale9Width="55" Scale9Height="7" ctype="PanelObjectData">
+                <Position X="155.0000" Y="24.7120" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <Size X="240.0000" Y="30.0000" />
-                <PrePosition X="0.3000" Y="0.3089" />
+                <PrePosition X="0.3100" Y="0.3089" />
                 <PreSize X="0.4800" Y="0.3750" />
                 <Children>
-                  <NodeObjectData Name="RedLoadingBar" ActionTag="-964554510" FrameEvent="" Tag="10" ObjectIndex="1" PrePositionEnabled="True" ProgressInfo="100" ProgressType="Right_To_Left" ctype="LoadingBarObjectData">
-                    <Position X="120.0000" Y="15.0000" />
-                    <Scale ScaleX="14.2741" ScaleY="3.0635" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <Size X="16.0000" Y="9.0000" />
-                    <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <ImageFileData Type="Normal" Path="ccz/ui/res/image2 (2).png" />
-                  </NodeObjectData>
-                  <NodeObjectData Name="BlueLoadingBar" ActionTag="-1990700243" FrameEvent="" Tag="18" ObjectIndex="2" PrePositionEnabled="True" ProgressInfo="26" ctype="LoadingBarObjectData">
-                    <Position X="120.0000" Y="15.0000" />
-                    <Scale ScaleX="14.2741" ScaleY="3.0635" />
+                  <NodeObjectData Name="BlueLoadingBar" ActionTag="-1990700243" FrameEvent="" Tag="18" ObjectIndex="2" PrePositionEnabled="True" ProgressInfo="100" ctype="LoadingBarObjectData">
+                    <Position X="120.0001" Y="15.0000" />
+                    <Scale ScaleX="14.4000" ScaleY="3.0635" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <Size X="16.0000" Y="9.0000" />
@@ -94,40 +84,49 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <ImageFileData Type="Normal" Path="ccz/ui/res/image1 (2).png" />
                   </NodeObjectData>
+                  <NodeObjectData Name="RedLoadingBar" ActionTag="-964554510" FrameEvent="" Tag="10" ObjectIndex="1" PrePositionEnabled="True" ProgressInfo="58" ctype="LoadingBarObjectData">
+                    <Position X="120.0000" Y="15.0000" />
+                    <Scale ScaleX="14.7000" ScaleY="3.0635" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <Size X="16.0000" Y="9.0000" />
+                    <PrePosition X="0.5000" Y="0.5000" />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <ImageFileData Type="Normal" Path="ccz/ui/res/image2 (2).png" />
+                  </NodeObjectData>
                   <NodeObjectData Name="blue" ActionTag="-1125036596" FrameEvent="" Tag="13" ObjectIndex="11" ctype="SpriteObjectData">
-                    <Position X="-5.1408" Y="12.6825" />
+                    <Position X="259.8591" Y="9.8288" />
                     <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <AnchorPoint ScaleX="0.5400" ScaleY="0.4123" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <Size X="64.0000" Y="64.0000" />
-                    <PrePosition X="-0.0214" Y="0.4227" />
+                    <PrePosition X="1.0827" Y="0.3276" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="ccz/ui/res/blue.png" />
                   </NodeObjectData>
                   <NodeObjectData Name="red" ActionTag="-893051119" FrameEvent="" Tag="14" ObjectIndex="12" PrePositionEnabled="True" FlipX="True" ctype="SpriteObjectData">
-                    <Position X="259.2841" Y="13.5710" />
+                    <Position X="-3.7165" Y="11.1283" />
                     <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <AnchorPoint ScaleX="0.8215" ScaleY="0.4201" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <Size X="64.0000" Y="64.0000" />
-                    <PrePosition X="1.0804" Y="0.4524" />
+                    <PrePosition X="-0.0155" Y="0.3709" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="ccz/ui/res/red.png" />
                   </NodeObjectData>
                 </Children>
-                <FileData Type="Normal" Path="ccz/ui/res/bg8.png" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </NodeObjectData>
               <NodeObjectData Name="QuickDialogCheckBox" ActionTag="-512587484" FrameEvent="" Tag="119" ObjectIndex="1" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
-                <Position X="325.1725" Y="21.1247" />
+                <Position X="333.1725" Y="22.9085" />
                 <Scale ScaleX="0.7857" ScaleY="0.8929" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <Size X="40.0000" Y="40.0000" />
-                <PrePosition X="0.6503" Y="0.2641" />
+                <PrePosition X="0.6663" Y="0.2864" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <NormalBackFileData Type="Normal" Path="ccz/ui/res/CheckBox_Normal.png" />
                 <PressedBackFileData Type="Normal" Path="ccz/ui/res/CheckBox_Press.png" />
@@ -136,12 +135,12 @@
                 <NodeDisableFileData Type="Normal" Path="ccz/ui/res/CheckBoxNode_Disable.png" />
               </NodeObjectData>
               <NodeObjectData Name="BitmapFontLabel_3" ActionTag="467742161" FrameEvent="" Tag="216" ObjectIndex="3" LabelText="快速对话" ctype="TextBMFontObjectData">
-                <Position X="398.7352" Y="24.0332" />
+                <Position X="406.7352" Y="22.9085" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="0" B="0" />
                 <Size X="107.0000" Y="26.0000" />
-                <PrePosition X="0.7975" Y="0.3004" />
+                <PrePosition X="0.8135" Y="0.2864" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <LabelBMFontFile_CNB Type="Normal" Path="ccz/ui/font/ziku_0.fnt" />
               </NodeObjectData>
