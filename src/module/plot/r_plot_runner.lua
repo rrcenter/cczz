@@ -20,6 +20,7 @@ RPlotRunner.ctor = function(self, rplotIndex)
 
     self.roles = {} -- 记录所有rolePlay产生的角色
     self.heads = {} -- 记录所有headPortraitPlay产生的头像
+    self.loopedSoundHandles = {} -- 记录所有循环播放中的音效句柄
     self.plotIndex = rplotIndex
 
     self:initMapGrid()
@@ -581,9 +582,20 @@ RPlotRunner.cmdRShowSceneName = function(self, args, callback)
     callback()
 end
 
--- 音效设定 音效类型6 重复次数
+-- 音效设定 音效类型 标识(为0表循环播放，为255表停止，为1表仅播放1次) 
 RPlotRunner.cmdPlaySound = function(self, args, callback)
-    AudioMgr.playSound(args[1])
+    local filename = args[1]
+    local flag = args[2]
+    if flag == 0 then
+        local handle = AudioMgr.playSound(filename, true)
+        self.loopedSoundHandles[filename] = handle
+    elseif flag == 255 then
+        local handle = self.loopedSoundHandles[filename]
+        AudioMgr.stopSound(handle)
+    elseif flag == 1 then
+        AudioMgr.playSound(filename, false)
+    end
+    
     callback()
 end
 
