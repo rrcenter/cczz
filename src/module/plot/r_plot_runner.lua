@@ -591,7 +591,10 @@ RPlotRunner.cmdPlaySound = function(self, args, callback)
         self.loopedSoundHandles[filename] = handle
     elseif flag == 255 then
         local handle = self.loopedSoundHandles[filename]
-        AudioMgr.stopSound(handle)
+        if handle then
+            AudioMgr.stopSound(handle)
+            self.loopedSoundHandles[filename] = nil
+        end
     elseif flag == 1 then
         AudioMgr.playSound(filename, false)
     end
