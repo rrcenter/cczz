@@ -196,36 +196,6 @@ end
 General.onClick = function(self, event)
     printInfo("点中武将%s, 阵营:%s, 坐标：(%d, %d)", self:getName(), self:getSide(), self:getRow(), self:getCol())
 
-    if self:isActionDone() then
-        TipUtils.showTip(string.format("%s回合结束，已经无法再行动。", self:getName()))
-        EventMgr.triggerEvent(EventConst.GENERAL_ACTION_CANCEL_NO_ANIMATION, MapUtils.getCurrentGeneral())
-        EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
-        return
-    end
-
-    if self:isHunLuan() then
-        TipUtils.showTip(string.format("%s处于混乱状态，已经无法再行动。", self:getName()))
-        EventMgr.triggerEvent(EventConst.GENERAL_ACTION_CANCEL_NO_ANIMATION, MapUtils.getCurrentGeneral())
-        EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
-        return
-    end
-
-    if MapUtils.getCurrentGeneral() == self then
-        if self:isPlayer() then
-            EventMgr.triggerEvent(EventConst.GENERAL_SHOW_MENU, self)
-        else
-            local text = string.format("这是%s部分。", self:isFriend() and "友军" or "敌军")
-            TipUtils.showTip(text)
-
-            MapUtils.setCurrentGeneral(nil)
-            EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
-        end
-
-        return
-    elseif MapUtils.getCurrentGeneral() then
-        EventMgr.triggerEvent(EventConst.GENERAL_ACTION_CANCEL_NO_ANIMATION, MapUtils.getCurrentGeneral())
-    end
-
     MapUtils.setCurrentGeneral(self)
     EventMgr.triggerEvent(EventConst.GENERAL_SHOW_MOVE_RANGE, self)
     EventMgr.triggerEvent(EventConst.MOVE_TO_NODE, self)

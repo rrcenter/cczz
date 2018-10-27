@@ -59,13 +59,26 @@ end
 
 MoveBox.onClicked = function(self, event)
     local general = self.general
+    -- 检查是否能移动
     if not general:isPlayer() then
         TipUtils.showTip(string.format("这是%s部分。", general:isFriend() and "友军" or "敌军"))
-
         MapUtils.setCurrentGeneral(nil)
         EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
-
         return
+    else
+        if general:isActionDone() then
+            TipUtils.showTip(string.format("%s回合结束，已经无法再行动。", general:getName()))
+            MapUtils.setCurrentGeneral(nil)
+            EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
+            return
+        end
+    
+        if general:isHunLuan() then
+            TipUtils.showTip(string.format("%s处于混乱状态，已经无法再行动。", general:getName()))
+            MapUtils.setCurrentGeneral(nil)
+            EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
+            return
+        end
     end
 
     printInfo("点中了移动方块：(%d, %d)", self.row, self.col)
