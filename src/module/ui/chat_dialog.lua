@@ -125,9 +125,12 @@ ChatDialog.ctor = function(self, name, headIcon, isLeft, content, callback, choi
 end
 
 ChatDialog.onTouch = function(self, event)
+    printInfo("ChatDialog onTouch name: %s coord:(%0.2f,%0.2f)", event.name, event.x, event.y)
     if not self.hasChoices then
         self.finalCallback()
     end
+
+    return true
 end
 
 ChatDialog.realign = function(self, anchor, x, y)

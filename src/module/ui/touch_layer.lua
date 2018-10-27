@@ -12,12 +12,13 @@ TouchLayer.ctor = function(self)
 
     self:setTouchEnabled(true)
     self:addNodeEventListener(cc.NODE_TOUCH_EVENT, function(event)
-        self:onTouch(event)
+        return self:onTouch(event)
     end)
 end
 
 TouchLayer.onTouch = function(self, event)
     -- printInfo("子类应该自行实现自己的onTouch事件")
+    return false
 end
 
 return TouchLayer
