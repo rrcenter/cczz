@@ -1,0 +1,4 @@
+{
+    "luaide.apiType": "cocos2dx",
+    "luaide.scriptRoots": ["${workspaceRoot}/src"]
+}
