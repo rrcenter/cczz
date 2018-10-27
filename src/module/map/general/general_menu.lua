@@ -54,14 +54,14 @@ MenuItem.gray = function(self)
     self.leftSprite:gray()
     self.rightSprite:gray()
     self:setTouchEnabled(false)
-    self.nameLabel:setColor(FontRedColor)
+    self.nameLabel:setTextColor(FontGrayColor)
 end
 
 MenuItem.normal = function(self)
     self.leftSprite:normal()
     self.rightSprite:normal()
     self:setTouchEnabled(true)
-    self.nameLabel:setColor(FontColor)
+    self.nameLabel:setTextColor(FontColor)
 end
 
 local GeneralMenu = class("GeneralMenu", function()
