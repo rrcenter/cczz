@@ -8,6 +8,7 @@
 
 import(".math_ext")
 import(".table_ext")
+import(".debug_ext")
 
 Random          = import(".random")
 EventConst      = import(".event_const")
