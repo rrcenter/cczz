@@ -14,11 +14,11 @@ GameStartUI.ctor = function(self)
 end
 
 GameStartUI.initUI = function(self)
+    self:setPosition(display.cx, display.cy)
+
     self.rootNode    = UIHelper.seekNodeByName(self, "Root")
     self.startButton = UIHelper.seekNodeByName(self, "StartButton")
     self.loadButton  = UIHelper.seekNodeByName(self, "LoadButton")
-
-    self.rootNode:align(display.CENTER, display.cx, display.cy)
 end
 
 GameStartUI.initTouchEvent = function(self)

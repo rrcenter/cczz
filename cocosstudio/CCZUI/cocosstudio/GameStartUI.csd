@@ -15,7 +15,7 @@
           <NodeObjectData Name="Root" ActionTag="-790244899" FrameEvent="" Tag="27" ObjectIndex="1" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" LeftEage="50" RightEage="50" TopEage="50" BottomEage="50" Scale9OriginX="50" Scale9OriginY="50" Scale9Width="400" Scale9Height="275" ctype="PanelObjectData">
             <Position X="0.0000" Y="0.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <AnchorPoint />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <CColor A="255" R="255" G="255" B="255" />
             <Size X="640.0000" Y="400.0000" />
             <PrePosition X="0.0000" Y="0.0000" />
