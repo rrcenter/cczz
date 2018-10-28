@@ -3,7 +3,7 @@
 --]]
 
 local LoadingUI = class("LoadUI", function()
-    return display.newLayer()
+    return cc.uiloader:load("ccz/ui/LoadingUI.csb")
 end)
 
 LoadingUI.ctor = function(self, callback)
@@ -12,18 +12,14 @@ LoadingUI.ctor = function(self, callback)
 end
 
 LoadingUI.initUI = function(self)
-    self.uiNode = cc.uiloader:load("ccz/ui/LoadingUI.csb")
-    self.uiNode:addTo(self)
-
-    self.rootNode = UIHelper.seekNodeByName(self.uiNode, "Root")
-    self.rootNode:align(display.CENTER, display.cx, display.cy)
+    self.rootNode = UIHelper.seekNodeByName(self, "Root")
 
     local initSingleSaving = function(index)
-        local descLabel       = UIHelper.seekNodeByName(self.uiNode, "DescLabel" .. index)
-        local titleLabel      = UIHelper.seekNodeByName(self.uiNode, "TitleLabel" .. index)
-        local savingNameLabel = UIHelper.seekNodeByName(self.uiNode, "SavingNameLabel" .. index)
-        local levelLabel      = UIHelper.seekNodeByName(self.uiNode, "LevelLabel" .. index)
-        local saveButton      = UIHelper.seekNodeByName(self.uiNode, "SavingButton" .. index)
+        local descLabel       = UIHelper.seekNodeByName(self, "DescLabel" .. index)
+        local titleLabel      = UIHelper.seekNodeByName(self, "TitleLabel" .. index)
+        local savingNameLabel = UIHelper.seekNodeByName(self, "SavingNameLabel" .. index)
+        local levelLabel      = UIHelper.seekNodeByName(self, "LevelLabel" .. index)
+        local saveButton      = UIHelper.seekNodeByName(self, "SavingButton" .. index)
 
         local saveData = GameData.getSaveData(index)
         if saveData then
@@ -52,7 +48,7 @@ LoadingUI.initUI = function(self)
     initSingleSaving(2)
     initSingleSaving(3)
 
-    UIHelper.buttonRegisterByName(self.uiNode, "CloseButton", function()
+    UIHelper.buttonRegisterByName(self, "CloseButton", function()
         self.callback()
         self:removeSelf()
     end)
