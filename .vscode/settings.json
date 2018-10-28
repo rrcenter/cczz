@@ -1,4 +1,7 @@
 {
     "luaide.apiType": "cocos2dx",
-    "luaide.scriptRoots": ["${workspaceRoot}/src"]
+    "luaide.scriptRoots": [
+        "${workspaceRoot}/src"
+    ],
+    "luaide.luaTemplatesDir": "${workspaceRoot}/src/luaIde/template"
 }
