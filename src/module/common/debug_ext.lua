@@ -37,7 +37,13 @@ dumpNodeTree = function(node, nesting)
 
     local function _dump(node, nest)
         local children = node:getChildren()
-        printInfo("%s[%d]classname:%s, name:%s, zorder:%d", _getHead(nest), nest, node.__cname, node:getName(), node:getLocalZOrder())
+        local x, y = node:getPosition()
+        local anchor = node:getAnchorPoint()
+        printInfo("%s[%d]cname:%s name:%s pos(%g,%g) anchor(%g,%g) zorder:%d",
+            _getHead(nest), nest, node.__cname, node:getName(),
+            x, y,
+            anchor.x, anchor.y,
+            node:getLocalZOrder())
         if nest >= nesting then
             return
         end
