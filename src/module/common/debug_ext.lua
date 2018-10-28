@@ -37,17 +37,12 @@ dumpNodeTree = function(node, nesting)
 
     local function _dump(node, nest)
         local children = node:getChildren()
-        if #children == 0 then
-            local indent = "  "
-            printInfo("%s[%d]classname:%s, name:%s, zorder:%d", _getHead(nest), nest, node.__cname, node:getName(), node:getLocalZOrder())
-        else
-            printInfo("%s[%d]classname:%s, name:%s, zorder:%d", _getHead(nest), nest, node.__cname, node:getName(), node:getLocalZOrder())
-            if nest >= nesting then
-                return
-            end
-            for i, v in pairs(children) do
-                _dump(v, nest + 1)
-            end
+        printInfo("%s[%d]classname:%s, name:%s, zorder:%d", _getHead(nest), nest, node.__cname, node:getName(), node:getLocalZOrder())
+        if nest >= nesting then
+            return
+        end
+        for i, v in pairs(children) do
+            _dump(v, nest + 1)
         end
     end
 
