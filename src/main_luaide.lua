@@ -6,7 +6,8 @@ local breakSocketHandle,debugXpCall = require("luaIde.LuaDebugjit")("localhost",
 
 cc.Director:getInstance():getScheduler():scheduleScriptFunc(breakSocketHandle, 0.3, false) 
 
-function __G__TRACKBACK__(errorMessage)  
+function __G__TRACKBACK__(errorMessage)
+    printError(tostring(errorMessage) .. "\n")
     debugXpCall();  
 end
 
