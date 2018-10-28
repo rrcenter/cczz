@@ -5,7 +5,7 @@
 local LoadingUI = import(".loading_ui")
 
 local GameStartUI = class("GameStartUI", function()
-    return display.newLayer()
+    return cc.uiloader:load("ccz/ui/GameStartUI.csb")
 end)
 
 GameStartUI.ctor = function(self)
@@ -14,12 +14,9 @@ GameStartUI.ctor = function(self)
 end
 
 GameStartUI.initUI = function(self)
-    self.uiNode = cc.uiloader:load("ccz/ui/GameStartUI.csb")
-    self.uiNode:addTo(self)
-
-    self.rootNode    = UIHelper.seekNodeByName(self.uiNode, "Root")
-    self.startButton = UIHelper.seekNodeByName(self.uiNode, "StartButton")
-    self.loadButton  = UIHelper.seekNodeByName(self.uiNode, "LoadButton")
+    self.rootNode    = UIHelper.seekNodeByName(self, "Root")
+    self.startButton = UIHelper.seekNodeByName(self, "StartButton")
+    self.loadButton  = UIHelper.seekNodeByName(self, "LoadButton")
 
     self.rootNode:align(display.CENTER, display.cx, display.cy)
 end
