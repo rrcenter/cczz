@@ -61,7 +61,7 @@ MoveBox.onClicked = function(self, event)
     local general = self.general
     -- 检查是否能移动
     if not general:isPlayer() then
-        TipUtils.showTip(string.format("这是%s部分。", general:isFriend() and "友军" or "敌军"))
+        TipUtils.showTip(string.format("这是%s部队。", general:isFriend() and "友军" or "敌军"))
         MapUtils.setCurrentGeneral(nil)
         EventMgr.triggerEvent(EventConst.HIDE_ALL_VIEW)
         return
