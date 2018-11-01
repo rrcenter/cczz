@@ -201,6 +201,7 @@ MapView.initBackground = function(self)
     self.touchNode = touchNode
 
     local bg = ccexp.TMXTiledMap:create(MapUtils.getBackgroundRes())
+    bg:setName("Background")
     bg:align(display.LEFT_TOP, 0, display.height)
     bg:addTo(touchNode)
     self.bg = bg
