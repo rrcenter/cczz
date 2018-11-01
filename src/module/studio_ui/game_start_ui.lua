@@ -14,7 +14,7 @@ GameStartUI.ctor = function(self)
 end
 
 GameStartUI.initUI = function(self)
-    self:setPosition(display.cx, display.cy)
+    self:pos(display.cx, display.cy)
 
     self.rootNode    = UIHelper.seekNodeByName(self, "Root")
     self.startButton = UIHelper.seekNodeByName(self, "StartButton")
@@ -32,7 +32,7 @@ GameStartUI.initTouchEvent = function(self)
     UIHelper.buttonRegister(self.loadButton, function()
         printInfo("弹出载入进度界面")
         local loadingUI = LoadingUI.new()
-        loadingUI:addTo(self)
+        loadingUI:addTo(display.getRunningScene())
     end)
 end
 

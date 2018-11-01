@@ -12,6 +12,7 @@ LoadingUI.ctor = function(self, callback)
 end
 
 LoadingUI.initUI = function(self)
+    self:pos(display.cx, display.cy)
     self.rootNode = UIHelper.seekNodeByName(self, "Root")
 
     local initSingleSaving = function(index)
