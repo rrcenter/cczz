@@ -96,7 +96,7 @@ MapUtils.getTouchPosByRowAndCol = function(row, col, mapBg)
     return MapUtils.getTouchPosByMapPos(x, y, mapBg)
 end
 
--- 传入一个touch的点，需要准换一下，才能成为地图点，才能直接被使用
+-- 传入一个touch的点，需要转换一下，才能成为地图点，才能直接被使用
 MapUtils.getRowAndColByTouchPos = function(x, y, mapBg)
     -- 转换以后的坐标点，是以左下角为原点的，而游戏里面是以左上角为原点的，所以这里需要转换一下
     local p = mapBg:convertToNodeSpace(cc.p(x, y))
